@@ -9,9 +9,6 @@ const convert = require('koa-convert');
 const router = require('koa-router')();
 const path = require('path');
 
-//app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
-//app.use(webpackHotMiddleware(compiler));
-
 router
     .get("/", ctx => {
         ctx.body = fs.createReadStream( path.join( __dirname, 'index.html' ) )
